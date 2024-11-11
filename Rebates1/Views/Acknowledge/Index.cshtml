@@ -1,0 +1,74 @@
+﻿@model List<ApplicationStatistics>
+
+@{
+    ViewData["Title"] = "Home Page";
+
+    var currentUser = TempData["currentUser"];
+    TempData.Keep("currentUser");
+
+    var currentUserSurname = TempData["currentUserSurname"];
+    TempData.Keep("currentUserSurname");
+    var currentUserFirstname = TempData["currentUserFirstname"];
+    TempData.Keep("currentUserFirstname");
+}
+
+<div class="text-center">
+    @*<h1 class="display-4">Welcome</h1>*@
+    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+</div>
+
+<br />
+<br />
+
+<h1>Application Statistics</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Rebate Type</th>
+            <th>Number of Applications</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var application in Model)
+            {
+                <tr>
+                    <td>@application.RebateType</td>
+                    <td>@application.NumberOfApplications</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<canvas id="barChart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('barChart').getContext('2d');
+    var labels = @Html.Raw(Json.Serialize(Model.Select(x => x.RebateType)));
+    var data = @Html.Raw(Json.Serialize(Model.Select(x => x.NumberOfApplications)));
+
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Number of Applications for each Rebate',
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

@@ -1,0 +1,44 @@
+﻿@model List<ApplicationStatistics>
+
+@{
+    ViewData["Title"] = "Home Page";
+
+    var currentUser = TempData["currentUser"];
+    TempData.Keep("currentUser");
+
+    var currentUserSurname = TempData["currentUserSurname"];
+    TempData.Keep("currentUserSurname");
+    var currentUserFirstname = TempData["currentUserFirstname"];
+    TempData.Keep("currentUserFirstname");
+}
+
+<div class="text-center">
+    @*<h1 class="display-4">Welcome</h1>*@
+    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+</div>
+
+<br />
+<br />
+
+<h1>Admin Tasks</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rebates To Process</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var application in Model)
+            {
+                <tr>
+                    <td>@application.Name</td>
+                    <td>@application.NumberOfApplications</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

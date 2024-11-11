@@ -1,0 +1,429 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Rebates1.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Rebates1.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\base-admin-3-responsive.css",
+      "PackagePath": "staticwebassets\\css\\base-admin-3-responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\base-admin-3.css",
+      "PackagePath": "staticwebassets\\css\\base-admin-3.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\bootsWatchTheme.css",
+      "PackagePath": "staticwebassets\\css\\bootsWatchTheme.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\bootstrap-responsive.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-responsive.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\datatable_1.12_min.css",
+      "PackagePath": "staticwebassets\\css\\datatable_1.12_min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\datatable_2.2.3_min.css",
+      "PackagePath": "staticwebassets\\css\\datatable_2.2.3_min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\datatables.min.css",
+      "PackagePath": "staticwebassets\\css\\datatables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\pages\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\pages\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\print.min.css",
+      "PackagePath": "staticwebassets\\css\\print.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\css\\ui-lightness\\jquery-ui-1.10.0.custom.min.css",
+      "PackagePath": "staticwebassets\\css\\ui-lightness\\jquery-ui-1.10.0.custom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\joburg_logo.png",
+      "PackagePath": "staticwebassets\\joburg_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\Dashboard.js",
+      "PackagePath": "staticwebassets\\js\\Dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\DatePicker.js",
+      "PackagePath": "staticwebassets\\js\\DatePicker.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\Display.js",
+      "PackagePath": "staticwebassets\\js\\Display.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\IndexStart.js",
+      "PackagePath": "staticwebassets\\js\\IndexStart.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\ObjectionJS.js",
+      "PackagePath": "staticwebassets\\js\\ObjectionJS.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\ObjectionMulti.js",
+      "PackagePath": "staticwebassets\\js\\ObjectionMulti.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\ObjectionMultiO.js",
+      "PackagePath": "staticwebassets\\js\\ObjectionMultiO.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\ObjectionO.js",
+      "PackagePath": "staticwebassets\\js\\ObjectionO.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\PD.js",
+      "PackagePath": "staticwebassets\\js\\PD.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\PI.js",
+      "PackagePath": "staticwebassets\\js\\PI.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\Recaptcha.js",
+      "PackagePath": "staticwebassets\\js\\Recaptcha.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\Reg.js",
+      "PackagePath": "staticwebassets\\js\\Reg.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\RegC.js",
+      "PackagePath": "staticwebassets\\js\\RegC.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\Upload.js",
+      "PackagePath": "staticwebassets\\js\\Upload.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\js\\buttons.html5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\js\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\datatables.min.js",
+      "PackagePath": "staticwebassets\\js\\datatables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\jquery-3.5.1.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.5.1.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\jszip.min.js",
+      "PackagePath": "staticwebassets\\js\\jszip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\loading.js",
+      "PackagePath": "staticwebassets\\js\\loading.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\pdfmake.min.js",
+      "PackagePath": "staticwebassets\\js\\pdfmake.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\print.min.js",
+      "PackagePath": "staticwebassets\\js\\print.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\signature_pad.min.js",
+      "PackagePath": "staticwebassets\\js\\signature_pad.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\userDocs.js",
+      "PackagePath": "staticwebassets\\js\\userDocs.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\js\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\js\\vfs_fonts.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Rebates1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Rebates1.props",
+      "PackagePath": "build\\Rebates1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Rebates1.props",
+      "PackagePath": "buildMultiTargeting\\Rebates1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Rebates1.props",
+      "PackagePath": "buildTransitive\\Rebates1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

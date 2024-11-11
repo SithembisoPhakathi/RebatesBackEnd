@@ -1,0 +1,11 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{ 
+    <br />
+    <p> Account Number: @TempData["AccountNumber"] has been processed</p> 
+    <br />
+    <p> Thank you. You may close and go back to the list of rebates. </p>
+
+    <a class="btn" asp-controller="Acknowledge" asp-action="Acknowledge" style="margin-top: 10px; color: white; background-color: #63696B;"> Close </a>
+}

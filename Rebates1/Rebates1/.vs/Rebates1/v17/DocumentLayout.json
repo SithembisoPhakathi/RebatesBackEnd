@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|c:\\users\\10107037\\desktop\\rebates1\\rebates1\\rebates1\\views\\shared\\_viewform70.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|solutionrelative:rebates1\\views\\shared\\_viewform70.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|c:\\users\\10107037\\desktop\\rebates1\\rebates1\\rebates1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|solutionrelative:rebates1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|c:\\users\\10107037\\desktop\\rebates1\\rebates1\\rebates1\\controllers\\acknowledgecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|solutionrelative:rebates1\\controllers\\acknowledgecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|c:\\users\\10107037\\desktop\\rebates1\\rebates1\\rebates1\\views\\acknowledge\\acknowledge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|solutionrelative:rebates1\\views\\acknowledge\\acknowledge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|c:\\users\\10107037\\desktop\\rebates1\\rebates1\\rebates1\\models\\emailhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6731D05C-3F00-4AF1-8E9E-8091DF96E308}|Rebates1\\Rebates1.csproj|solutionrelative:rebates1\\models\\emailhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\appsettings.json",
+              "RelativeDocumentMoniker": "Rebates1\\appsettings.json",
+              "ToolTip": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\appsettings.json",
+              "RelativeToolTip": "Rebates1\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-08T06:40:04.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AcknowledgeController.cs",
+              "DocumentMoniker": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\Controllers\\AcknowledgeController.cs",
+              "RelativeDocumentMoniker": "Rebates1\\Controllers\\AcknowledgeController.cs",
+              "ToolTip": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\Controllers\\AcknowledgeController.cs",
+              "RelativeToolTip": "Rebates1\\Controllers\\AcknowledgeController.cs",
+              "ViewState": "AQIAAD4EAAAAAAAAAAAAAE0EAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:44:41.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Acknowledge.cshtml",
+              "DocumentMoniker": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\Views\\Acknowledge\\Acknowledge.cshtml",
+              "RelativeDocumentMoniker": "Rebates1\\Views\\Acknowledge\\Acknowledge.cshtml",
+              "ToolTip": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\Views\\Acknowledge\\Acknowledge.cshtml",
+              "RelativeToolTip": "Rebates1\\Views\\Acknowledge\\Acknowledge.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-01T11:44:30.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmailHelper.cs",
+              "DocumentMoniker": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\Models\\EmailHelper.cs",
+              "RelativeDocumentMoniker": "Rebates1\\Models\\EmailHelper.cs",
+              "ToolTip": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\Models\\EmailHelper.cs",
+              "RelativeToolTip": "Rebates1\\Models\\EmailHelper.cs",
+              "ViewState": "AQIAALAAAAAAAAAAAAAAAPkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T08:59:52.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_ViewForm70.cshtml",
+              "DocumentMoniker": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\Views\\Shared\\_ViewForm70.cshtml",
+              "RelativeDocumentMoniker": "Rebates1\\Views\\Shared\\_ViewForm70.cshtml",
+              "ToolTip": "C:\\Users\\10107037\\Desktop\\Rebates1\\Rebates1\\Rebates1\\Views\\Shared\\_ViewForm70.cshtml",
+              "RelativeToolTip": "Rebates1\\Views\\Shared\\_ViewForm70.cshtml",
+              "ViewState": "AQIAANUAAAAAAAAAAAAAADIBAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T08:55:49.865Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

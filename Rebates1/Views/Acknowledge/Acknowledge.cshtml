@@ -1,0 +1,140 @@
+﻿@{
+    ViewData["Title"] = "All Rebates";
+}
+
+<head>
+
+    @*<meta charset="utf-8">*@
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    @*<link rel="stylesheet" asp-append-version="true" href="~/css/bootsWatchTheme.css" />
+    <script asp-append-version="true" src="~/libs/bootstrap.min.js"></script>
+    <link asp-append-version="true" href="~/css/bootstrap-responsive.min.css" rel="stylesheet">*@
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+    <link asp-append-version="true" href="~/css/font-awesome.min.css" rel="stylesheet">
+
+    @*<link asp-append-version="true" href="~/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">*@
+
+    <link asp-append-version="true" href="~/css/base-admin-3.css" rel="stylesheet">
+    <link asp-append-version="true" href="~/css/base-admin-3-responsive.css" rel="stylesheet">
+
+    <link asp-append-version="true" href="~/css/pages/dashboard.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <link rel="stylesheet" href="https://www.koolchart.com/demo/KoolChart/Assets/Css/KoolChart.css" />
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+</head>
+
+@*<script asp-append-version="true" src="~/js/site.js"></script>*@
+
+<link rel="stylesheet" asp-append-version="true" href="~/css/datatable_1.12_min.css" />
+<link rel="stylesheet" asp-append-version="true" href="~/css/datatable_2.2.3_min.css" />
+<script asp-append-version="true" src="~/js/jquery-3.5.1.js" asp-append-version="true"></script>
+<script asp-append-version="true" src="~/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+<script asp-append-version="true" src="~/js/dataTables.buttons.min.js" asp-append-version="true"></script>
+<script asp-append-version="true" src="~/js/jszip.min.js" asp-append-version="true"></script>
+<script asp-append-version="true" src="~/js/pdfmake.min.js" asp-append-version="true"></script>
+<script asp-append-version="true" src="~/js/vfs_fonts.js" asp-append-version="true"></script>
+<script asp-append-version="true" src="~/js/buttons.html5.min.js" asp-append-version="true"></script>
+
+<br />
+<br />
+
+<div class="row" style="margin-left: -0.5%">
+    <div class="col-md-12 col-xs-10;">
+
+        <div class="widget" style="height: 44.5%;">
+
+            <div id="widget_header"
+                 class="widget-header"
+                 style="background-color:#E6B000;font-weight:bold;margin-top:0%;padding:5px 5px 5px 5px;">
+                                 
+            <h2 class="text-black">Rebates Table</h2>
+        
+        </div> <!-- /widget-header -->
+            <div class="widget-content">
+                <table id="example" class="display table table-bordered" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th>
+                                Account Number
+                            </th>
+                            <th>
+                                Rebate Type
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Date of Submission
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @{
+                            if (ViewBag.Rebates != null)
+                            {
+                                foreach (var item in ViewBag.Rebates)
+                                {
+                                    <tr>
+                                        <td> @item.AccountNumber </td>
+                                        <td> @item.Rebate_Type </td>
+                                        <td> @item.Status </td>
+                                        <td> @item.DateOfSubmission </td>                                        
+                                        <td> <a class="btn m-1" asp-controller="Acknowledge" asp-action="ViewData" asp-route-RebateType="@item.Rebate_Type" asp-route-RebateNo="@item.Rebate_No" style="background-color:#025752;font-weight:bold;color:white;"> View Form </a></td>   @*style="background-color :#E6B000"*@
+                                    </tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            responsive: true,
+            scrollX: true,
+            scrollCollapse: true,
+            scroller: true, 
+            //dom: 'Bfrtip',
+            //buttons: [
+            //    'copyHtml5',
+            //    'excelHtml5'
+            //]
+        });
+    });
+
+    $(document).ready(function () {
+        $('#example1').DataTable({
+            responsive: true,
+            scrollX: true,
+            scrollCollapse: true,
+            scroller: true
+        });
+    });
+
+    $(document).ready(function () {
+        $('#example2').DataTable({
+            responsive: true,
+            scrollX: true,
+            scrollCollapse: true,
+            scroller: true
+        });
+    });
+</script>
+
+<script asp-append-version="true" src="~/js/dashboard.js"></script>

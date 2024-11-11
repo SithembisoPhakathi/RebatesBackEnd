@@ -1,0 +1,657 @@
+﻿@model List<Rebates1.Models.RebatesViewModel>
+
+@{
+    Layout = "_Layout";
+}
+
+@{
+    var RebateNo = TempData["RebateNo"];
+    var AccountNumber = TempData["AccountNumber"];
+    var IDNumber = TempData["IDNumber"];
+    var Gender = TempData["Gender"];
+    var MaritalStatus = TempData["MaritalStatus"];
+    var Surname = TempData["Surname"];
+    var FirstNames = TempData["FirstNames"];
+    var SpouseSurname = TempData["SpouseSurname"];
+    var SpouseFirstNames = TempData["SpouseFirstNames"];
+    var SpouseIDNumber = TempData["SpouseIDNumber"];
+    var StreetAddress = TempData["StreetAddress"];
+    var CitySuburb = TempData["CitySuburb"];
+    var PostalCode = TempData["PostalCode"];
+    var PostalAddress = TempData["PostalAddress"];
+    var PostalAddressCitySuburb = TempData["PostalAddressCitySuburb"];
+    var PostalAddressPostalCode = TempData["PostalAddressPostalCode"];
+    var HomeTel = TempData["HomeTel"];
+    var CellNo = TempData["CellNo"];
+    var WorkTel = TempData["WorkTel"];
+    var Email = TempData["Email"];
+    var OccupyMentionedProperty = TempData["OccupyMentionedProperty"];
+    var StandNumber = TempData["StandNumber"];
+    var PortionNumber = TempData["PortionNumber"];
+    var Suburb = TempData["Suburb"];
+    var NameOfBodyCorporate = TempData["NameOfBodyCorporate"];
+    var UnitNumberDoorNumber = TempData["UnitNumberDoorNumber"];
+    var DoorNumber = TempData["DoorNumber"];
+    var ErfandTownship = TempData["ErfandTownship"];
+    var NameOfApplicant = TempData["NameOfApplicant"];
+    var NameOfHeritageProperty = TempData["NameOfHeritageProperty"];
+    var BriefDescriptionHS = TempData["BriefDescriptionHS"];
+    var NationalHeritageSite = TempData["NationalHeritageSite"];
+    var ProvincialHeritageSite = TempData["ProvincialHeritageSite"];
+    var HeritageArea = TempData["HeritageArea"];
+    var ProvisionalProtection = TempData["ProvisionalProtection"];
+    var Other = TempData["Other"];
+    var SpecifyOther = TempData["SpecifyOther"];
+    var NumberDateGovernmentNotice = TempData["NumberDateGovernmentNotice"];
+    var DetailsGazette = TempData["DetailsGazette"];
+    var FormerProtection = TempData["FormerProtection"];
+    var NameOfTheOrganisation = TempData["NameOfTheOrganisation"];
+    var NameSurnameDesignation = TempData["NameSurnameDesignation"];
+    var OperationTime = TempData["OperationTime"];
+    var RegistrationNumber = TempData["RegistrationNumber"];
+    var RegisteredWithSARS = TempData["RegisteredWithSARS"];
+    var ContactPersonWithCOJStatements = TempData["ContactPersonWithCOJStatements"];
+    var LargeOrganisation = TempData["LargeOrganisation"];
+    var LargeOrganisationDescription = TempData["LargeOrganisationDescription"];
+    var NoPermantStaff = TempData["NoPermantStaff"];
+    var FulltimeScholars = TempData["FulltimeScholars"];
+    var NoOfScholarsPayingFull = TempData["NoOfScholarsPayingFull"];
+    var NoOfScholarsNotPaying = TempData["NoOfScholarsNotPaying"];
+    var EstimatedRevenuePayingFees = TempData["EstimatedRevenuePayingFees"];
+    var EstimatedRevenueNotPayingFees = TempData["EstimatedRevenueNotPayingFees"];
+    var ExpectedIncome1 = TempData["ExpectedIncome1"];
+    var EIPastYear1 = TempData["EIPastYear1"];
+    var EICurrentYear1 = TempData["EICurrentYear1"];
+    var EINextYear1 = TempData["EINextYear1"];
+    var ExpectedIncome2 = TempData["ExpectedIncome2"];
+    var EIPastYear2 = TempData["EIPastYear2"];
+    var EICurrentYear2 = TempData["EICurrentYear2"];
+    var EINextYear2 = TempData["EINextYear2"];
+    var ExpectedIncome3 = TempData["ExpectedIncome3"];
+    var EIPastYear3 = TempData["EIPastYear3"];
+    var EICurrentYear3 = TempData["EICurrentYear3"];
+    var EINextYear3 = TempData["EINextYear3"];
+    var ExpectedIncome4 = TempData["ExpectedIncome4"];
+    var EIPastYear4 = TempData["EIPastYear4"];
+    var EICurrentYear4 = TempData["EICurrentYear4"];
+    var EINextYear4 = TempData["EINextYear4"];
+    var Expediture1 = TempData["Expediture1"];
+    var ExpediturePastYear1 = TempData["ExpediturePastYear1"];
+    var ExpeditureNextYear1 = TempData["ExpeditureNextYear1"];
+    var ExpeditureCurrentYear1 = TempData["ExpeditureCurrentYear1"];
+    var Expediture2 = TempData["Expediture2"];
+    var ExpediturePastYear2 = TempData["ExpediturePastYear2"];
+    var ExpeditureCurrentYear2 = TempData["ExpeditureCurrentYear2"];
+    var ExpeditureNextYear2 = TempData["ExpeditureNextYear2"];
+    var Expediture3 = TempData["Expediture3"];
+    var ExpediturePastYear3 = TempData["ExpediturePastYear3"];
+    var ExpeditureCurrentYear3 = TempData["ExpeditureCurrentYear3"];
+    var ExpeditureNextYear3 = TempData["ExpeditureNextYear3"];
+    var SalaryPastYear = TempData["SalaryPastYear"];
+    var SalaryCurrentYear = TempData["SalaryCurrentYear"];
+    var SalaryNextYear = TempData["SalaryNextYear"];
+    var BonusPastYear = TempData["BonusPastYear"];
+    var BonusCurrentYear = TempData["BonusCurrentYear"];
+    var BonusNextYear = TempData["BonusNextYear"];
+
+    TempData.Keep("RebateNo");
+    TempData.Keep("AccountNumber");
+    TempData.Keep("IdentityNumber");
+    TempData.Keep("Gender");
+    TempData.Keep("MaritalStatus");
+    TempData.Keep("Surname");
+    TempData.Keep("SpouseSurname");
+    TempData.Keep("SpouseFirstNames");
+    TempData.Keep("SpouseIDNumber");
+    TempData.Keep("StreetAddress");
+    TempData.Keep("CitySuburb");
+    TempData.Keep("PostalCode");
+    TempData.Keep("PostalAddress");
+    TempData.Keep("PostalAddressCitySuburb");
+    TempData.Keep("PostalAddressPostalCode");
+    TempData.Keep("HomeTel");
+    TempData.Keep("CellNo");
+    TempData.Keep("WorkTel");
+    TempData.Keep("Email");
+    TempData.Keep("OccupyMentionedProperty");
+    TempData.Keep("StandNumber");
+    TempData.Keep("PortionNumber");
+    TempData.Keep("Suburb");
+    TempData.Keep("NameOfBodyCorporate");
+    TempData.Keep("UnitNumberDoorNumber");
+    TempData.Keep("DoorNumber");
+    TempData.Keep("ErfandTownship");
+    TempData.Keep("NameOfApplicant");
+    TempData.Keep("NameOfHeritageProperty");
+    TempData.Keep("BriefDescriptionHS");
+    TempData.Keep("NationalHeritageSite");
+    TempData.Keep("ProvincialHeritageSite");
+    TempData.Keep("HeritageArea");
+    TempData.Keep("ProvisionalProtection");
+    TempData.Keep("Other");
+    TempData.Keep("SpecifyOther");
+    TempData.Keep("NumberDateGovernmentNotice");
+    TempData.Keep("DetailsGazette");
+    TempData.Keep("FormerProtection");
+    TempData.Keep("NameOfTheOrganisation");
+    TempData.Keep("NameSurnameDesignation");
+    TempData.Keep("OperationTime");
+    TempData.Keep("RegistrationNumber");
+    TempData.Keep("RegisteredWithSARS");
+    TempData.Keep("ContactPersonWithCOJStatements");
+    TempData.Keep("LargeOrganisation");
+    TempData.Keep("LargeOrganisationDescription");
+    TempData.Keep("NoPermantStaff");
+    TempData.Keep("FulltimeScholars");
+    TempData.Keep("NoOfScholarsPayingFull");
+    TempData.Keep("NoOfScholarsNotPaying");
+    TempData.Keep("EstimatedRevenuePayingFees");
+    TempData.Keep("EstimatedRevenueNotPayingFees");
+    TempData.Keep("ExpectedIncome1");
+    TempData.Keep("EIPastYear1");
+    TempData.Keep("EICurrentYear1");
+    TempData.Keep("EINextYear1");
+    TempData.Keep("ExpectedIncome2");
+    TempData.Keep("EIPastYear2");
+    TempData.Keep("EICurrentYear2");
+    TempData.Keep("EINextYear2");
+    TempData.Keep("ExpectedIncome3");
+    TempData.Keep("EIPastYear3");
+    TempData.Keep("EICurrentYear3");
+    TempData.Keep("EINextYear3");
+    TempData.Keep("ExpectedIncome4");
+    TempData.Keep("EIPastYear4");
+    TempData.Keep("EICurrentYear4");
+    TempData.Keep("EINextYear4");
+    TempData.Keep("Expediture1");
+    TempData.Keep("ExpediturePastYear1");
+    TempData.Keep("ExpeditureNextYear1");
+    TempData.Keep("ExpeditureCurrentYear1");
+    TempData.Keep("Expediture2");
+    TempData.Keep("ExpediturePastYear2");
+    TempData.Keep("ExpeditureCurrentYear2");
+    TempData.Keep("ExpeditureNextYear2");
+    TempData.Keep("Expediture3");
+    TempData.Keep("ExpediturePastYear3");
+    TempData.Keep("ExpeditureCurrentYear3");
+    TempData.Keep("ExpeditureNextYear3");
+    TempData.Keep("SalaryPastYear");
+    TempData.Keep("SalaryCurrentYear");
+    TempData.Keep("SalaryNextYear");
+    TempData.Keep("BonusPastYear");
+    TempData.Keep("BonusCurrentYear");
+    TempData.Keep("BonusNextYear");
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+<div style="display:flex;justify-content: center;">
+    <h4 style="margin-top: 2%;" id="form_head">Application for Rates Rebate: Heritage Sites</h4><br />
+    <hr />
+    <hr />
+</div>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <input hidden type="text" id="RebateNo" name="Rebate_No" value="@item.Rebate_No" />
+
+<form method="post" enctype="multipart/form-data" asp-controller="Acknowledge" asp-action="ApproveReject" asp-route-approval="Approved" asp-route-RebateNo="@item.Rebate_No" style="margin-left: 0px">
+
+    <div id="section1" style="display:flex;justify-content: center;">
+        <div class="div1" style=" margin-top: 12px; border-radius: 25px; border: 2px solid #C69E63; padding: 20px;width: 1050px;}">
+            <div class="form-group">
+                <label class="control-label">Account Number</label>
+                <input class="form-control" minlength="9" maxlength="9" id="AccountNumber" value="@AccountNumber" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Name of the Organisation </label>
+                <input class="form-control" value="@NameOfTheOrganisation" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Name, Surname and Designation of the person completing application </label>
+                <input class="form-control" value="@NameSurnameDesignation" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> How long has the school, college or university been in operation? </label>
+                <input class="form-control" value="@OperationTime" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Registration Details </label>
+                <input class="form-control" value="@RegistrationNumber" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Registered With SARS </label>
+                <input class="form-control" id="Surname" value="@RegisteredWithSARS" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Postal Address </label>
+                <input class="form-control" value="@PostalAddress" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Street Address </label>
+                <input class="form-control" id="StreetAddress" value="@StreetAddress" disabled />
+            </div>
+
+            <div class="form-group" style="display: inline-block; width: 248px">
+                <label class="control-label" style="display: block;"> Work Tel </label>
+                <input class="form-control" value="@WorkTel" disabled />
+            </div>
+
+            <div class="form-group" style="display: inline-block; width: 248px">
+                <label class="control-label" style="display: block;"> Cell No</label>
+                <input class="form-control" id="CellNo" value="@CellNo" disabled />
+            </div>
+
+            <div class="form-group" style="display: inline-block; width: 248px">
+                <label class="control-label" style="display: block;"> Email </label>
+                <input class="form-control" id="Email" value="@Email" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Contact person who receives City of Johannesburg statements and Valuation information </label>
+                <input class="form-control" id="StreetAddress" value="@ContactPersonWithCOJStatements" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Is the school, college, or university an affiliate to a larger organisation </label>
+                <input class="form-control" value="@LargeOrganisation" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Please give details regarding the affiliation </label>
+                <input class="form-control" value="@LargeOrganisationDescription" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> No. of permanent  staff employed </label>
+                <input class="form-control" value="@NoPermantStaff" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> No. of full-time enrolled scholars/students </label>
+                <input class="form-control" value="@FulltimeScholars" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> No. of scholars/students paying full school, college, or university fees </label>
+                <input class="form-control" value="@NoOfScholarsPayingFull" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> No. of scholars/students not able to pay school fees  </label>
+                <input class="form-control" value="@NoOfScholarsNotPaying" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Estimated Revenue forfeiture - scholars/students paying partial fees </label>
+                <input class="form-control" value="@EstimatedRevenuePayingFees" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> Estimated Revenue forfeiture - scholars/students not able to pay school, college, or university fees </label>
+                <input class="form-control" value="@EstimatedRevenueNotPayingFees" disabled />
+            </div>
+
+            <label> Summary of projected income and expenditure scholars/student </label>
+
+            <table>
+                <tr>
+                    <th>Income</th>
+                    <th>Financial Year</th>
+                    <th>Financial Year</th>
+                    <th>Financial Year</th>
+                </tr>
+                <tr>
+                    <th>Expected Income</th>
+                    <th>Past Year</th>
+                    <th>Current Year</th>
+                    <th>Next Year</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpectedIncome1" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EIPastYear1" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EICurrentYear1" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EINextYear1" disabled />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpectedIncome2" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EIPastYear2" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EICurrentYear2" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EINextYear2" disabled />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpectedIncome3" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EIPastYear3" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EICurrentYear3" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EINextYear3" disabled />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpectedIncome4" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EIPastYear4" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EICurrentYear4" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@EINextYear4" disabled />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Expenditure</th>
+                    <th>Past Year</th>
+                    <th>Current Year</th>
+                    <th>Next Year</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@Expediture1" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpediturePastYear1" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpeditureCurrentYear1" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpeditureNextYear1" disabled />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@Expediture2" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpediturePastYear2" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpeditureCurrentYear2" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpeditureNextYear2" disabled />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@Expediture3" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpediturePastYear3" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpeditureCurrentYear3" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@ExpeditureNextYear3" disabled />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label class="form-control"> Salaries </label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@SalaryPastYear" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@SalaryCurrentYear" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@SalaryNextYear" disabled />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label class="form-control"> Bonus </label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@BonusPastYear" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@BonusCurrentYear" disabled />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input class="form-control" value="@BonusNextYear" disabled />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+            <br />
+
+            <div style="display:flex;justify-content: center;">
+                @if (Model != null)
+                {
+                    foreach (var item1 in Model)
+                    {
+                        @if (@item.Files1 != "")
+                        {
+                            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                                <button onclick="downloadForm()" class="btn btn-primary">Download Form</button>
+                                <a class="btn btn-primary" asp-controller="Acknowledge" asp-action="DownloadFiles1" asp-route-RebateNo="@item.Rebate_No">Download Files</a>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+
+            <div class="row">
+                <div class="col=lg-6">
+                    <label for="approverComment">Comment:</label>
+                    <textarea class="form-control" id="approverComment" onchange="myFunction(this.value)" name="approverComment" required></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="margin-top: 5%; display: flex; justify-content: center;" id="approve-reject">
+                    <a style="background-color: #025752; color: white; margin-right: 5px" class="btn" data-bs-target="#approveModal" data-bs-toggle="modal">Approve</a>
+                    <a style="background-color: red; color: white" class="btn" data-bs-target="#rejectModal" data-bs-toggle="modal">Reject</a>
+                </div>
+            </div>
+
+            <div class="m-4">
+                <div id="approveModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Confirmation</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Do you want to approve this rebate?</p>
+                                @*<p class="text-secondary"><small>If you don't save, your changes will be lost.</small></p>*@
+                            </div>
+                            <div class="modal-footer" style="display: flex; justify-content: center;">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn" style="background-color: #E6B000;">Proceed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <form method="post" enctype="multipart/form-data" asp-controller="Acknowledge" asp-action="ApproveReject" asp-route-approval="Rejected" asp-route-RebateNo="@item.Rebate_No" style="margin-left: 0px">
+
+            <div hidden class="row">
+                <div class="col=lg-6">
+                    <label for="approverComment">Comment:</label>
+                    <textarea class="form-control" id="approverComment2" name="approverComment"></textarea>
+                </div>
+            </div>
+
+            <div class="m-4">
+                <div id="rejectModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Confirmation</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Do you want to reject this rebate?</p>
+                                @*<p class="text-secondary"><small>If you don't save, your changes will be lost.</small></p>*@
+                            </div>
+                            <div class="modal-footer" style="display: flex; justify-content: center;">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn" style="background-color: #E6B000;">Proceed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    }
+}
+
+<script>
+    function downloadForm() {
+        // Select the form section
+        const formSection = document.getElementById('section1');
+
+        const rebateNo = document.getElementById('RebateNo').value;
+
+        // Use html2pdf to convert the section to a PDF
+        html2pdf(formSection, {
+            margin: 1,
+            filename: rebateNo + '.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        });
+    }
+</script>
+
+<script>
+    function myFunction(val) 
+    {
+        document.getElementById("approverComment2").value = val;
+    }
+</script>
+
+<script>
+    const textarea1 = document.getElementById('approverComment');
+
+    const preventEnterKey = function (textarea) 
+    {
+        textarea.addEventListener('keydown', function (event)
+        {
+            if (event.key === 'Enter')
+            {
+                event.preventDefault();
+            }
+        });
+    };
+
+    preventEnterKey(textarea1);
+</script>
