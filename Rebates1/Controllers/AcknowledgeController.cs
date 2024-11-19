@@ -1167,6 +1167,9 @@ namespace Rebates1.Controllers
                     throw ex;
                 }
 
+                string emailAddress = TempData["Email"]?.ToString();
+                string rebateNo = TempData["Rebate_No"]?.ToString();
+
                 emailHelper.SendEmailNotificationRebateApprove(TempData["Email"].ToString(), TempData["Rebate_No"].ToString());               
 
                 //Delete
@@ -1414,6 +1417,6 @@ namespace Rebates1.Controllers
             }
 
             return View(applicationStatistics);
-        }
+        }       
     }
 }

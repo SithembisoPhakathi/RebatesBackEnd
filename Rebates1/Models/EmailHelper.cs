@@ -204,6 +204,9 @@ namespace Rebates1.Models
             try
             {
                 client.Send(mailMessage);
+
+                SaveEmailAsEml(mailMessage, sRebateNo);
+
                 return RedirectToPage("/Account/RegisterConfirmation", new { area = "Identity" });
             }
             catch (Exception ex)
@@ -244,6 +247,9 @@ namespace Rebates1.Models
             try
             {
                 client.Send(mailMessage);
+
+                SaveEmailAsEml(mailMessage, sRebateNo);
+
                 return RedirectToPage("/Account/RegisterConfirmation", new { area = "Identity" });
             }
             catch (Exception ex)
@@ -251,6 +257,33 @@ namespace Rebates1.Models
                 // log exception
             }
             return false;
+        }
+
+        private void SaveEmailAsEml(MailMessage mailMessage, string sRebateNo)
+        {
+            try
+            {
+                // Convert MailMessage to MimeMessage 
+                var mimeMessage = MimeKit.MimeMessage.CreateFromMailMessage(mailMessage);
+
+                // Define file path (E:\SavedEmails)
+                string directoryPath = Path.Combine("E:\\", "Rebates Outcome Emails");
+                Directory.CreateDirectory(directoryPath); // Ensure directory exists
+
+                string filePath = Path.Combine(directoryPath, $"RebateNo_{sRebateNo}.eml");
+
+                // Save as .eml
+                using (var fileStream = File.Create(filePath))
+                {
+                    mimeMessage.WriteTo(fileStream);
+                }
+
+                Console.WriteLine($"Email saved as .eml at: {filePath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while saving the email: {ex.Message}");
+            }
         }
     }
 }
