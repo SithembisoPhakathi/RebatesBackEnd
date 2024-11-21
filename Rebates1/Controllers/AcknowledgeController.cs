@@ -412,6 +412,7 @@ namespace Rebates1.Controllers
                         {
                             Rebate_No = dr["Rebate_No"].ToString(),
                             Rebate_Type = dr["Rebate_Type"].ToString(),
+                            Status = dr["Status"].ToString(),
                             AccountNumber = dr["AccountNumber"].ToString(),
                             Gender = dr["Gender"].ToString(),
                             MaritalStatus = dr["MaritalStatus"].ToString(),
@@ -441,6 +442,8 @@ namespace Rebates1.Controllers
                     foreach (var items in ViewBag.HighDensity)
                     {
                         TempData["Rebate_No"] = @items.Rebate_No;
+                        TempData["RebateType"] = @items.Rebate_Type;
+                        TempData["Status"] = @items.Status;
                         TempData["AccountNumber"] = @items.AccountNumber;
                         TempData["IDNumber"] = @items.IDNumber;
                         TempData["PassportNumber"] = @items.PassportNumber;
@@ -1089,7 +1092,7 @@ namespace Rebates1.Controllers
             return View();
         }
 
-        public IActionResult ApproveReject(string? RebateNo, string? approval, string? approverComment)
+        public IActionResult ApproveReject(string? RebateNo, string? approval, string? approverComment, string? RebateType)
         {
             var user = HttpContext.User;
             var userName = user.Identity.Name;
@@ -1274,6 +1277,109 @@ namespace Rebates1.Controllers
                 }
 
                 emailHelper.SendEmailNotificationRebateReject(TempData["Email"].ToString(), TempData["Rebate_No"].ToString());
+
+                //Delete
+                //if (RebatesViewModels.Count > 0)
+                //{
+                //    RebatesViewModels.Clear();
+                //}
+                //try
+                //{
+                //    conn.Open();
+                //    com.Connection = conn;
+                //    com.CommandText = "DELETE FROM [Objection].[dbo].[Rebate_Info_Final] where Rebate_No = '" + RebateNo + "'";
+                //    dr = com.ExecuteReader();
+                //    while (dr.Read())
+                //    {
+                //        RebatesViewModels.Add(new RebatesViewModel
+                //        {
+
+                //        });
+                //    }
+                //    conn.Close();
+
+                //}
+                //catch (Exception ex)
+                //{
+                //    throw ex;
+                //}
+
+                return RedirectToAction("Display");
+
+                //return RedirectToAction("Acknowledge");
+            }
+
+            if (approval == "Pending Approval")
+            {
+                if (RebatesViewModels.Count > 0)
+                {
+                    RebatesViewModels.Clear();
+                }
+                try
+                {
+                    conn.Open();
+                    com.Connection = conn;
+
+                    string currentUserFirstname = TempData["currentUserFirstname"].ToString();
+                    string currentUserSurname = TempData["currentUserSurname"].ToString();
+
+                    com.CommandText = "EXEC UpdateRebateInfoPendingApproval @RebateNo, @ApproverComment, @CurrentUserFirstname, @CurrentUserSurname";
+
+                    com.Parameters.AddWithValue("@RebateNo", RebateNo);
+                    com.Parameters.AddWithValue("@ApproverComment", approverComment);
+                    com.Parameters.AddWithValue("@CurrentUserFirstname", currentUserFirstname);
+                    com.Parameters.AddWithValue("@CurrentUserSurname", currentUserSurname);
+
+                    dr = com.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        RebatesViewModels.Add(new RebatesViewModel
+                        {
+
+                        });
+                    }
+                    conn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                //Insert Rebate Audit Table
+                if (RebatesViewModels.Count > 0)
+                {
+                    RebatesViewModels.Clear();
+                }
+                try
+                {
+                    conn.Open();
+                    com.Connection = conn;
+
+                    string currentUserFullName = TempData["currentUserFirstname"].ToString() + ' ' + TempData["currentUserSurname"].ToString();
+
+                    com.CommandText = "EXEC InsertRebateAuditPendingApproval @RebateNo, @AccountNumber, @ApproverFullName, @ApproverComment";
+
+                    com.Parameters.AddWithValue("@AccountNumber", AccountNumber);
+                    com.Parameters.AddWithValue("@ApproverFullName", currentUserFullName);
+
+                    dr = com.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        RebatesViewModels.Add(new RebatesViewModel
+                        {
+
+                        });
+                    }
+                    conn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                //emailHelper.SendEmailNotificationRebateReject(TempData["Email"].ToString(), TempData["Rebate_No"].ToString());
 
                 //Delete
                 //if (RebatesViewModels.Count > 0)

@@ -6,6 +6,8 @@
 
 @{
     var RebateNo = TempData["RebateNo"];
+    var Rebatetype = TempData["RebateType"];
+    var Status = TempData["Status"];
     var AccountNumber = TempData["AccountNumber"];
     var IDNumber = TempData["IDNumber"];
     var PassportNumber = TempData["PassportNumber"];
@@ -29,6 +31,8 @@
     var Role = TempData["currentRole"];
 
     TempData.Keep("RebateNo");
+    TempData.Keep("RebateType");
+    TempData.Keep("Status");
     TempData.Keep("AccountNumber");
     TempData.Keep("IdentityNumber");
     TempData.Keep("PassportNumber");
@@ -65,6 +69,8 @@
 
             <div id="section1" style="display:flex;justify-content: center;">
                 <div class="div1" style=" margin-top: 12px; border-radius: 25px; border: 2px solid #C69E63; padding: 20px;width: 1050px;}">
+                    <input type="hidden" name="RebateType" value="@Rebatetype" />
+
                     <div class="form-group">
                         <label class="control-label">Account Number</label>
                         <input class="form-control" minlength="9" maxlength="9" id="AccountNumber" value="@AccountNumber" disabled />
@@ -185,7 +191,7 @@
                 }
             </div>
 
-            @if (Role != "SuperUser")
+            @if (Role != "Director")
             {
                 <div class="row">
                     <div class="col=lg-6">
@@ -196,7 +202,20 @@
 
                 <div class="row">
                     <div style="margin-top: 5%; display: flex; justify-content: center;" id="approve-reject">
-                        <a style="background-color: #025752; color: white; margin-right: 5px" class="btn" data-bs-target="#approveModal" data-bs-toggle="modal">Approve</a>
+
+                        @if (Rebatetype.ToString() == "Public Benefit Organisation Rebate" && Status.ToString() == "Pending Approval")
+                        {
+                            <a style="background-color: #025752; color: white; margin-right: 5px" class="btn" data-bs-target="#approveModal" data-bs-toggle="modal">Approve</a>
+                        }
+                        else if (Rebatetype.ToString() == "Public Benefit Organisation Rebate")
+                        {
+                            <a style="background-color: #025752; color: white; margin-right: 5px" class="btn" data-bs-target="#pendingModal" data-bs-toggle="modal">Approve</a>
+                        }
+                        else
+                        {
+                            <a style="background-color: #025752; color: white; margin-right: 5px" class="btn" data-bs-target="#approveModal" data-bs-toggle="modal">Approve</a>
+                        }
+
                         <a style="background-color: red; color: white" class="btn" data-bs-target="#rejectModal" data-bs-toggle="modal">Reject</a>
                     </div>
                 </div>
@@ -234,6 +253,8 @@
                 </div>
             </div>
 
+            <input type="hidden" name="RebateType" value="@Rebatetype" />
+
             <div class="m-4">
                 <div id="rejectModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
                     <div class="modal-dialog">
@@ -256,6 +277,40 @@
             </div>
         </form>
 
+        <form method="post" enctype="multipart/form-data" asp-controller="Acknowledge" asp-action="ApproveReject" asp-route-approval="Pending Approval" asp-route-RebateNo="@item.Rebate_No" style="margin-left: 0px">
+
+            <div hidden class="row">
+                <div class="col=lg-6">
+                    <label for="approverComment">Comment:</label>
+                    <textarea class="form-control" id="approverComment3" name="approverComment"></textarea>
+                </div>
+            </div>
+
+            <input type="hidden" name="RebateType" value="@Rebatetype" />
+
+            <div class="m-4">
+                <div id="pendingModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Confirmation</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Do you want to pending this rebate?</p>
+                                @*<p class="text-secondary"><small>If you don't save, your changes will be lost.</small></p>*@
+                            </div>
+                            <div class="modal-footer" style="display: flex; justify-content: center;">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn" style="background-color: #E6B000;">Proceed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+                
     }
 }
 
@@ -280,6 +335,7 @@
 <script>
     function myFunction(val) {
         document.getElementById("approverComment2").value = val;
+        document.getElementById("approverComment3").value = val;
     }
 </script>
 
