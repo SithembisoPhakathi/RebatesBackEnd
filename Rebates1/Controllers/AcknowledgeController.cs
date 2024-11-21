@@ -1417,6 +1417,53 @@ namespace Rebates1.Controllers
             }
 
             return View(applicationStatistics);
-        }       
+        }
+
+        public async Task<IActionResult> PBOAcknowledge(string? userName)
+        {
+            var user = HttpContext.User;
+            //var userName = user.Identity.Name;
+
+            if (RebatesViewModels.Count > 0)
+            {
+                RebatesViewModels.Clear();
+            }
+
+            try
+            {
+                conn.Open();
+                com.Connection = conn;
+                com.CommandText = "EXEC GetRebateInfos_PBO";
+
+                dr = com.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    RebatesViewModels.Add(new RebatesViewModel()
+                    {
+                        Rebate_No = dr["Rebate_No"].ToString(),
+                        AccountNumber = dr["AccountNumber"].ToString(),
+                        IDNumber = dr["IDNumber"].ToString(),
+                        Rebate_Type = dr["Rebate_Type"].ToString(),
+                        Gender = dr["Gender"].ToString(),
+                        Surname = dr["Surname"].ToString(),
+                        FirstNames = dr["FirstNames"].ToString(),
+                        Status = dr["Status"].ToString(),
+                        DateOfSubmission = dr["DateOfSubmission"].ToString(),
+                        Email = dr["Email"].ToString(),
+                        UserID_SAP_Number = dr["UserID SAP Number"].ToString()
+                    });
+                }
+                conn.Close();
+
+                ViewBag.Rebates = RebatesViewModels.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return View("PBOAcknowledge", new { userName = userName });
+        }
     }
 }

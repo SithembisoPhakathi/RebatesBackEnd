@@ -12,7 +12,7 @@
     var Gender = TempData["Gender"];
     var MaritalStatus = TempData["MaritalStatus"];
     var Surname = TempData["Surname"];
-    var FirstNames = TempData["FirstNames"];    
+    var FirstNames = TempData["FirstNames"];
     var StreetAddress = TempData["StreetAddress"];
     var CitySuburb = TempData["CitySuburb"];
     var PostalCode = TempData["PostalCode"];
@@ -22,10 +22,11 @@
     var HomeTel = TempData["HomeTel"];
     var CellNo = TempData["CellNo"];
     var WorkTel = TempData["WorkTel"];
-    var Email = TempData["Email"];    
+    var Email = TempData["Email"];
     var AccountNo_MultipleUnits = TempData["AccountNo_MultipleUnits"];
     var Contact_CellNo = TempData["Contact_CellNo"];
     var SchemeBuilding = TempData["SchemeBuilding"];
+    var Role = TempData["currentRole"];
 
     TempData.Keep("RebateNo");
     TempData.Keep("AccountNumber");
@@ -33,7 +34,7 @@
     TempData.Keep("PassportNumber");
     TempData.Keep("Gender");
     TempData.Keep("MaritalStatus");
-    TempData.Keep("Surname");   
+    TempData.Keep("Surname");
     TempData.Keep("StreetAddress");
     TempData.Keep("CitySuburb");
     TempData.Keep("PostalCode");
@@ -43,10 +44,11 @@
     TempData.Keep("HomeTel");
     TempData.Keep("CellNo");
     TempData.Keep("WorkTel");
-    TempData.Keep("Email");    
+    TempData.Keep("Email");
     TempData.Keep("AccountNo_MultipleUnits");
     TempData.Keep("Contact_CellNo");
     TempData.Keep("SchemeBuilding");
+    TempData.Keep("currentRole");
 }
 
 
@@ -59,111 +61,111 @@
     {
         <input hidden type="text" id="RebateNo" name="Rebate_No" value="@item.Rebate_No" />
 
-<form method="post" enctype="multipart/form-data" asp-controller="Acknowledge" asp-action="ApproveReject" asp-route-approval="Approved" asp-route-RebateNo="@item.Rebate_No" style="margin-left: 0px">
+        <form method="post" enctype="multipart/form-data" asp-controller="Acknowledge" asp-action="ApproveReject" asp-route-approval="Approved" asp-route-RebateNo="@item.Rebate_No" style="margin-left: 0px">
 
-    <div id="section1" style="display:flex;justify-content: center;">
-        <div class="div1" style=" margin-top: 12px; border-radius: 25px; border: 2px solid #C69E63; padding: 20px;width: 1050px;}">
-            <div class="form-group">
-                <label class="control-label">Account Number</label>
-                <input class="form-control" minlength="9" maxlength="9" id="AccountNumber" value="@AccountNumber" disabled />
-            </div>
+            <div id="section1" style="display:flex;justify-content: center;">
+                <div class="div1" style=" margin-top: 12px; border-radius: 25px; border: 2px solid #C69E63; padding: 20px;width: 1050px;}">
+                    <div class="form-group">
+                        <label class="control-label">Account Number</label>
+                        <input class="form-control" minlength="9" maxlength="9" id="AccountNumber" value="@AccountNumber" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Gender </label>
-                <input class="form-control" value="@Gender" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Gender </label>
+                        <input class="form-control" value="@Gender" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Marital Status </label>
-                <input class="form-control" value="@MaritalStatus" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Marital Status </label>
+                        <input class="form-control" value="@MaritalStatus" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Surname </label>
-                <input class="form-control" id="Surname" value="@Surname" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Surname </label>
+                        <input class="form-control" id="Surname" value="@Surname" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> First Names </label>
-                <input class="form-control" id="FirstNames" value="@FirstNames" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> First Names </label>
+                        <input class="form-control" id="FirstNames" value="@FirstNames" disabled />
+                    </div>
 
-            <div class="form-group" style="display: inline-block; width: 248px">
-                <label class="control-label"> RSA ID Number </label>
-                <input class="form-control" id="IDNumber" maxlength="13" value="@IDNumber" disabled />
-            </div>
+                    <div class="form-group" style="display: inline-block; width: 248px">
+                        <label class="control-label"> RSA ID Number </label>
+                        <input class="form-control" id="IDNumber" maxlength="13" value="@IDNumber" disabled />
+                    </div>
 
-            <div class="form-group" style="display: inline-block; width: 248px">
-                <label class="control-label"> Passport Number </label>
-                <input class="form-control" id="IDNumber" maxlength="13" value="@PassportNumber" disabled />
-            </div>
+                    <div class="form-group" style="display: inline-block; width: 248px">
+                        <label class="control-label"> Passport Number </label>
+                        <input class="form-control" id="IDNumber" maxlength="13" value="@PassportNumber" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Street Address </label>
-                <input class="form-control" id="StreetAddress" value="@StreetAddress" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Street Address </label>
+                        <input class="form-control" id="StreetAddress" value="@StreetAddress" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> City/Suburb </label>
-                <input class="form-control" id="CitySuburb" value="@CitySuburb" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> City/Suburb </label>
+                        <input class="form-control" id="CitySuburb" value="@CitySuburb" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Postal Code </label>
-                <input class="form-control" id="PostalCode" value="@PostalCode" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Postal Code </label>
+                        <input class="form-control" id="PostalCode" value="@PostalCode" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Postal Address </label>
-                <input class="form-control" value="@PostalAddress" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Postal Address </label>
+                        <input class="form-control" value="@PostalAddress" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Postal Address City/Suburb</label>
-                <input class="form-control" value="@PostalAddressCitySuburb" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Postal Address City/Suburb</label>
+                        <input class="form-control" value="@PostalAddressCitySuburb" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Postal Code </label>
-                <input class="form-control" value="@PostalAddressPostalCode" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Postal Code </label>
+                        <input class="form-control" value="@PostalAddressPostalCode" disabled />
+                    </div>
 
-            <div class="form-group" style="display: inline-block; width: 248px">
-                <label class="control-label" style="display: block;"> Home Tel</label>
-                <input class="form-control" value="@HomeTel" disabled />
-            </div>
+                    <div class="form-group" style="display: inline-block; width: 248px">
+                        <label class="control-label" style="display: block;"> Home Tel</label>
+                        <input class="form-control" value="@HomeTel" disabled />
+                    </div>
 
-            <div class="form-group" style="display: inline-block; width: 248px">
-                <label class="control-label" style="display: block;"> Cell No</label>
-                <input class="form-control" id="CellNo" value="@CellNo" disabled />
-            </div>
+                    <div class="form-group" style="display: inline-block; width: 248px">
+                        <label class="control-label" style="display: block;"> Cell No</label>
+                        <input class="form-control" id="CellNo" value="@CellNo" disabled />
+                    </div>
 
-            <div class="form-group" style="display: inline-block; width: 248px">
-                <label class="control-label" style="display: block;"> Work Tel </label>
-                <input class="form-control" value="@WorkTel" disabled />
-            </div>
+                    <div class="form-group" style="display: inline-block; width: 248px">
+                        <label class="control-label" style="display: block;"> Work Tel </label>
+                        <input class="form-control" value="@WorkTel" disabled />
+                    </div>
 
-            <div class="form-group" style="display: inline-block; width: 248px">
-                <label class="control-label" style="display: block;"> Email </label>
-                <input class="form-control" id="Email" value="@Email" disabled />
-            </div>
+                    <div class="form-group" style="display: inline-block; width: 248px">
+                        <label class="control-label" style="display: block;"> Email </label>
+                        <input class="form-control" id="Email" value="@Email" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Account Numbers(s) - Multiple Units </label>
-                <input class="form-control" value="@AccountNo_MultipleUnits" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Account Numbers(s) - Multiple Units </label>
+                        <input class="form-control" value="@AccountNo_MultipleUnits" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Contact - Tel/Cell Number</label>
-                <input class="form-control" value="@Contact_CellNo" disabled />
-            </div>
+                    <div class="form-group">
+                        <label class="control-label"> Contact - Tel/Cell Number</label>
+                        <input class="form-control" value="@Contact_CellNo" disabled />
+                    </div>
 
-            <div class="form-group">
-                <label class="control-label"> Scheme Building </label>
-                <input class="form-control" value="@SchemeBuilding" disabled />
+                    <div class="form-group">
+                        <label class="control-label"> Scheme Building </label>
+                        <input class="form-control" value="@SchemeBuilding" disabled />
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
             <br />
 
@@ -183,19 +185,22 @@
                 }
             </div>
 
-            <div class="row">
-                <div class="col=lg-6">
-                    <label for="approverComment">Comment:</label>
-                    <textarea class="form-control" id="approverComment" onchange="myFunction(this.value)" name="approverComment" required></textarea>
+            @if (Role != "SuperUser")
+            {
+                <div class="row">
+                    <div class="col=lg-6">
+                        <label for="approverComment">Comment:</label>
+                        <textarea class="form-control" id="approverComment" onchange="myFunction(this.value)" name="approverComment" required></textarea>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div style="margin-top: 5%; display: flex; justify-content: center;" id="approve-reject">
-                    <a style="background-color: #025752; color: white; margin-right: 5px" class="btn" data-bs-target="#approveModal" data-bs-toggle="modal">Approve</a>
-                    <a style="background-color: red; color: white" class="btn" data-bs-target="#rejectModal" data-bs-toggle="modal">Reject</a>
+                <div class="row">
+                    <div style="margin-top: 5%; display: flex; justify-content: center;" id="approve-reject">
+                        <a style="background-color: #025752; color: white; margin-right: 5px" class="btn" data-bs-target="#approveModal" data-bs-toggle="modal">Approve</a>
+                        <a style="background-color: red; color: white" class="btn" data-bs-target="#rejectModal" data-bs-toggle="modal">Reject</a>
+                    </div>
                 </div>
-            </div>
+            }
 
             <div class="m-4">
                 <div id="approveModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
@@ -282,12 +287,9 @@
 <script>
     const textarea1 = document.getElementById('approverComment');
 
-    const preventEnterKey = function (textarea) 
-    {
-        textarea.addEventListener('keydown', function (event) 
-        {
-            if (event.key === 'Enter') 
-            {
+    const preventEnterKey = function (textarea) {
+        textarea.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
                 event.preventDefault();
             }
         });
