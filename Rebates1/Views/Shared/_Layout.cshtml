@@ -11,7 +11,7 @@
 
 @{
     var FirstName = TempData["currentUserFirstname"];
-    var Surname = TempData["currentUserSurname"];   
+    var Surname = TempData["currentUserSurname"];
     var Role = TempData["currentRole"];
     var useremail = TempData["currentUserEmail"];
 
@@ -47,15 +47,21 @@
                 }
 
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">                        
+                    <ul class="navbar-nav flex-grow-1">
                         @*<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>*@
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Acknowledge" asp-action="Acknowledge">My Tasks</a>
-                        </li>
+                        @if (Role != null)
+                        {
+                            @if (Role.ToString() == "Operational Manager")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Acknowledge" asp-action="Acknowledge">My Tasks</a>
+                                </li>
+                            }
+                        }
 
-                        @if(Role != null)
+                        @if (Role != null)
                         {
                             @if (Role.ToString() == "Director")
                             {
@@ -63,11 +69,21 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Acknowledge" asp-action="PBOAcknowledge">PBO Applications</a>
                                 </li>
                             }
-                        }                        
-                        
+                        }
+
+                        @if (Role != null)
+                        {
+                            @if (Role.ToString() == "Group Head")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Acknowledge" asp-action="PBOPending">PBO Pending</a>
+                                </li>
+                            }
+                        }
+
                     </ul>
 
-                    <p class="nav text-dark" >Hello, @FirstName @Surname</p>
+                    <p class="nav text-dark">Hello, @FirstName @Surname</p>
 
                     @*<p class="nav navbar-text">Hello, @User.Identity?.Name!</p>*@
                 </div>
@@ -97,14 +113,14 @@
 @await RenderSectionAsync("Scripts", required: false)
 
 <footer class="border-top text-muted" style="position:absolute; bottom:0; width:100%;">
-        <div class="container pb-3">
-            <br />
-                &copy; @date - Rebates @*- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
-            <br />
-        </div>
- </footer>
+    <div class="container pb-3">
+        <br />
+        &copy; @date - Rebates @*- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+        <br />
+    </div>
+</footer>
 
-    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+@*<script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)*@

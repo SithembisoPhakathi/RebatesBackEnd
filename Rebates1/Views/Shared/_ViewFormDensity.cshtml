@@ -193,13 +193,25 @@
 
             @if (Role != "Director")
             {
-                <div class="row">
-                    <div class="col=lg-6">
-                        <label for="approverComment">Comment:</label>
-                        <textarea class="form-control" id="approverComment" onchange="myFunction(this.value)" name="approverComment" required></textarea>
+                @if (Status.ToString() == "Pending Approval")
+                {
+                    <div class="row">
+                        <div class="col=lg-6">
+                            <label for="approverComment">Comment:</label>
+                            <textarea class="form-control" id="approverComment4" onchange="myFunction(this.value)" name="approverComment4" required></textarea>
+                        </div>
                     </div>
-                </div>
-
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col=lg-6">
+                            <label for="approverComment">Comment:</label>
+                            <textarea class="form-control" id="approverComment" onchange="myFunction(this.value)" name="approverComment" required></textarea>
+                        </div>
+                    </div>
+                }
+                
                 <div class="row">
                     <div style="margin-top: 5%; display: flex; justify-content: center;" id="approve-reject">
 
@@ -255,6 +267,8 @@
 
             <input type="hidden" name="RebateType" value="@Rebatetype" />
 
+            <input type="hidden" name="approverComment4" class="HiddenApproverComment" />
+
             <div class="m-4">
                 <div id="rejectModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
                     <div class="modal-dialog">
@@ -277,7 +291,7 @@
             </div>
         </form>
 
-        <form method="post" enctype="multipart/form-data" asp-controller="Acknowledge" asp-action="ApproveReject" asp-route-approval="Pending Approval" asp-route-RebateNo="@item.Rebate_No" style="margin-left: 0px">
+        <form method="post" enctype="multipart/form-data" asp-controller="Acknowledge" asp-action="ApproveReject" asp-route-approval="Pending Approval" asp-route-RebateNo="@item.Rebate_No" style="margin-left: 0px" onsubmit="addCommentToForm(this)">
 
             <div hidden class="row">
                 <div class="col=lg-6">
@@ -286,7 +300,7 @@
                 </div>
             </div>
 
-            <input type="hidden" name="RebateType" value="@Rebatetype" />
+            <input type="hidden" name="RebateType" value="@Rebatetype" />            
 
             <div class="m-4">
                 <div id="pendingModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
@@ -297,7 +311,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body">
-                                <p>Do you want to pending this rebate?</p>
+                                <p>Do you want to approve this rebate?</p>
                                 @*<p class="text-secondary"><small>If you don't save, your changes will be lost.</small></p>*@
                             </div>
                             <div class="modal-footer" style="display: flex; justify-content: center;">
@@ -336,9 +350,19 @@
     function myFunction(val) {
         document.getElementById("approverComment2").value = val;
         document.getElementById("approverComment3").value = val;
+        document.getElementById("approverComment4").value = val;
     }
 </script>
 
+<script>
+    function addCommentToForm(form) {
+        // Get the value from the textarea
+        var commentValue = document.getElementById('ApproverComment4').value;
+
+        // Set the value to the hidden input inside the specific form being submitted
+        form.querySelector('.HiddenApproverComment').value = commentValue;
+    }
+</script>
 
 <script>
     const textarea1 = document.getElementById('approverComment');

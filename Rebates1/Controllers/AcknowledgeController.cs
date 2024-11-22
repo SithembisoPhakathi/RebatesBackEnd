@@ -1092,7 +1092,7 @@ namespace Rebates1.Controllers
             return View();
         }
 
-        public IActionResult ApproveReject(string? RebateNo, string? approval, string? approverComment, string? RebateType)
+        public IActionResult ApproveReject(string? RebateNo, string? approval, string? approverComment, string? RebateType, string? approverComment4)
         {
             var user = HttpContext.User;
             var userName = user.Identity.Name;
@@ -1113,12 +1113,13 @@ namespace Rebates1.Controllers
                     string currentUserFirstname = TempData["currentUserFirstname"].ToString();
                     string currentUserSurname = TempData["currentUserSurname"].ToString();
 
-                    com.CommandText = "EXEC UpdateRebateInfoApprove @RebateNo, @ApproverComment, @CurrentUserFirstname, @CurrentUserSurname";
+                    com.CommandText = "EXEC UpdateRebateInfoApprove @RebateNo, @ApproverComment, @ApproverComment4, @CurrentUserFirstname, @CurrentUserSurname";
                     // Add parameters
-                    com.Parameters.AddWithValue("@RebateNo", RebateNo);
-                    com.Parameters.AddWithValue("@ApproverComment", approverComment);
-                    com.Parameters.AddWithValue("@CurrentUserFirstname", currentUserFirstname);
-                    com.Parameters.AddWithValue("@CurrentUserSurname", currentUserSurname);
+                    com.Parameters.AddWithValue("@RebateNo", string.IsNullOrEmpty(RebateNo) ? DBNull.Value : RebateNo);
+                    com.Parameters.AddWithValue("@ApproverComment", string.IsNullOrEmpty(approverComment) ? DBNull.Value : approverComment);
+                    com.Parameters.AddWithValue("@ApproverComment4", string.IsNullOrEmpty(approverComment4) ? DBNull.Value : approverComment4);
+                    com.Parameters.AddWithValue("@CurrentUserFirstname", string.IsNullOrEmpty(currentUserFirstname) ? DBNull.Value : currentUserFirstname);
+                    com.Parameters.AddWithValue("@CurrentUserSurname", string.IsNullOrEmpty(currentUserSurname) ? DBNull.Value : currentUserSurname);
 
                     dr = com.ExecuteReader();
                     while (dr.Read())
@@ -1220,12 +1221,13 @@ namespace Rebates1.Controllers
                     string currentUserFirstname = TempData["currentUserFirstname"].ToString();
                     string currentUserSurname = TempData["currentUserSurname"].ToString();
 
-                    com.CommandText = "EXEC UpdateRebateInfoAdminReject @RebateNo, @ApproverComment, @CurrentUserFirstname, @CurrentUserSurname";
+                    com.CommandText = "EXEC UpdateRebateInfoAdminReject @RebateNo, @ApproverComment, @ApproverComment4, @CurrentUserFirstname, @CurrentUserSurname";
 
-                    com.Parameters.AddWithValue("@RebateNo", RebateNo);
-                    com.Parameters.AddWithValue("@ApproverComment", approverComment);
-                    com.Parameters.AddWithValue("@CurrentUserFirstname", currentUserFirstname);
-                    com.Parameters.AddWithValue("@CurrentUserSurname", currentUserSurname);
+                    com.Parameters.AddWithValue("@RebateNo", string.IsNullOrEmpty(RebateNo) ? DBNull.Value : RebateNo);
+                    com.Parameters.AddWithValue("@ApproverComment", string.IsNullOrEmpty(approverComment) ? DBNull.Value : approverComment);
+                    com.Parameters.AddWithValue("@ApproverComment4", string.IsNullOrEmpty(approverComment4) ? DBNull.Value : approverComment4);
+                    com.Parameters.AddWithValue("@CurrentUserFirstname", string.IsNullOrEmpty(currentUserFirstname) ? DBNull.Value : currentUserFirstname);
+                    com.Parameters.AddWithValue("@CurrentUserSurname", string.IsNullOrEmpty(currentUserSurname) ? DBNull.Value : currentUserSurname);                    
 
                     dr = com.ExecuteReader();
                     while (dr.Read())
@@ -1329,6 +1331,16 @@ namespace Rebates1.Controllers
                     com.Parameters.AddWithValue("@ApproverComment", approverComment);
                     com.Parameters.AddWithValue("@CurrentUserFirstname", currentUserFirstname);
                     com.Parameters.AddWithValue("@CurrentUserSurname", currentUserSurname);
+
+                    if (!string.IsNullOrEmpty(approverComment4))
+                    {
+                        com.Parameters.AddWithValue("@ApproverComment4", approverComment4);
+                    }
+                    else
+                    {
+                        // Use DBNull.Value for SQL NULL
+                        com.Parameters.AddWithValue("@ApproverComment4", DBNull.Value);
+                    }
 
                     dr = com.ExecuteReader();
                     while (dr.Read())
@@ -1570,6 +1582,53 @@ namespace Rebates1.Controllers
             }
 
             return View("PBOAcknowledge", new { userName = userName });
+        }
+
+        public async Task<IActionResult> PBOPending(string? userName)
+        {
+            var user = HttpContext.User;
+            //var userName = user.Identity.Name;
+
+            if (RebatesViewModels.Count > 0)
+            {
+                RebatesViewModels.Clear();
+            }
+
+            try
+            {
+                conn.Open();
+                com.Connection = conn;
+                com.CommandText = "EXEC GetRebateInfos_PBO_Pending";
+
+                dr = com.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    RebatesViewModels.Add(new RebatesViewModel()
+                    {
+                        Rebate_No = dr["Rebate_No"].ToString(),
+                        AccountNumber = dr["AccountNumber"].ToString(),
+                        IDNumber = dr["IDNumber"].ToString(),
+                        Rebate_Type = dr["Rebate_Type"].ToString(),
+                        Gender = dr["Gender"].ToString(),
+                        Surname = dr["Surname"].ToString(),
+                        FirstNames = dr["FirstNames"].ToString(),
+                        Status = dr["Status"].ToString(),
+                        DateOfSubmission = dr["DateOfSubmission"].ToString(),
+                        Email = dr["Email"].ToString(),
+                        UserID_SAP_Number = dr["UserID SAP Number"].ToString()
+                    });
+                }
+                conn.Close();
+
+                ViewBag.Rebates = RebatesViewModels.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return View("PBOPending", new { userName = userName });
         }
     }
 }
